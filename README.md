@@ -8,7 +8,7 @@ AutoShorts é uma ferramenta desktop que analisa vídeos longos (lives, gameplay
 
 ## O que faz
 
-- **Detecta momentos automaticamente** — análise de picos de áudio + IA (Gemini 2.5 Flash) identifica os trechos mais interessantes do vídeo
+- **Detecta momentos automaticamente** — análise de picos de áudio + IA (Gemini 2.5 Flash ou Ollama local) identifica os trechos mais interessantes do vídeo
 - **Revisão antes de cortar** — interface lista os momentos detectados com score e contexto; o usuário aprova quais quer processar
 - **Crop vertical 9:16** — corte central para formato mobile, sem perder conteúdo importante
 - **Legendas sincronizadas** — transcrição via Whisper com timing palavra-por-palavra; exporta `.srt` editável
@@ -41,8 +41,8 @@ AutoShorts é uma ferramenta desktop que analisa vídeos longos (lives, gameplay
 |---|---|
 | Interface | CustomTkinter (Python) |
 | Detecção de áudio | NumPy (análise RMS) |
-| Detecção por IA | Gemini 2.5 Flash via Google AI Studio |
-| Transcrição | OpenAI Whisper (modelo `small`) |
+| Detecção por IA | Gemini 2.5 Flash (nuvem) · Ollama (local, offline) |
+| Transcrição | faster-whisper (modelo `small`, CUDA) |
 | Edição de vídeo | MoviePy v2.x |
 | Legendas | Pillow (PIL) — sem ImageMagick |
 
